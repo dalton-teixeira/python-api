@@ -1,8 +1,8 @@
-# python-api
+# Start up python-api
 
 `cd api`
 
-python 2
+using python 2
 
 
 `pip install -r requirements.txt` --user
@@ -19,3 +19,10 @@ python 3
 In case port 5000 to be in use by another execution, you can kill the process with:
 
 `fuser 5000/tcp -k`
+
+
+
+# Running robots
+
+
+`python3 -m robot <test-file>.robot`
