@@ -1,0 +1,26 @@
+{
+    "method": "GET",
+    "url": "http://127.0.0.1:5000/new Test juice",
+    "scheme": "http",
+    "netloc": "127.0.0.1:5000",
+    "path": "/new Test juice",
+    "query": {},
+    "body": null,
+    "headers": {
+        "Accept": "application/json, */*",
+        "Content-Type": "application/json",
+        "User-Agent": "RESTinstance/1.0.2"
+    },
+    "proxies": {},
+    "timeout": [
+        null,
+        null
+    ],
+    "cert": null,
+    "sslVerify": true,
+    "allowRedirects": true,
+    "timestamp": {
+        "utc": "2020-05-27T13:54:18.567918+00:00",
+        "local": "2020-05-27T10:54:18.567918-03:00"
+    }
+}
