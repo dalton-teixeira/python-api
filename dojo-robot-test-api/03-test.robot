@@ -42,3 +42,21 @@ Create new item
   #Add item to Cart
   #Validate Cart
   
+Validate response list
+
+  ${new IPA beer}  Create Dictionary    id=new IPA  price=${5.1}  delivery=${0}
+  #{"id": "new guarana", "price": 1.7, "delivery": 0} 
+  Set Global Variable   ${new IPA beer}
+
+  Set Global Variable  ${quantity}  ${70}
+  PUT  /  ${new IPA beer}
+  Integer  response status  200
+
+  
+Reuse same item form last test
+  Log Variables
+  POST  /  [{"id": "${new IPA beer.id}", "quantity": ${quantity}}]
+  Output  response  response.json
+  
+  #Array  response body items    minItems=2  maxItems=2  
+  Number  $.items[?(@.id \= "${new IPA beer.id}")].subtotal   ${new IPA beer.price * ${quantity}}

@@ -1,0 +1,5 @@
+base_url: http://127.0.0.1:5000
+token:  mytokenDEV
+my_list: 
+  - item one: item one
+  - item two: item two
